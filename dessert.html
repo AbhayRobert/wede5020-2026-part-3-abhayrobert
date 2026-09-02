@@ -1,12 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First HTML Page</title>
-  </head>
-  <body>
-    <h1>Hello, Web!</h1>
-    <p>This is the body of the document.</p>
-  </body>
+    <title>Phantom Recipes | Dessert</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Main Navigation Bar -->
+    <header>
+        <div>
+            <img src="assets/images/logo1.png" width="80" height="80" alt="Phantom Recipes Logo">
+            <strong>Phantom Recipes</strong>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+
+        <div>
+            <a href="enquiry.html" class="btn-orange">Submit a Recipe</a>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h2>Dessert Recipes</h2>
+        <p>Got a sweet tooth? Explore our dessert recipes.</p>
+    </div>
+
+    <!-- Dessert Recipes List -->
+    <div class="recipe-list">
+
+        <!-- RECIPE 1 -->
+        <div class="recipe-card">
+            <div class="recipe-photo">
+                <img src="assets/images/dessert/recipe1.jpg" alt="Chewy Brown Butter Chocolate Chip Cookies">
+            </div>
+            <div class="recipe-text">
+                <h3>Chewy Brown Butter Chocolate Chip Cookies</h3>
+                <p>A baking staple elevated by the nutty, caramelized depth of browned butter.</p>
+                <h4>Ingredients:</h4>
+                <ul>
+                    <li>2 cups all-purpose flour</li>
+                    <li>1/2 cup granulated sugar</li>
+                    <li>1 cup packed brown sugar</li>
+                    <li>1 cup unsalted butter (browned and cooled)</li>
+                    <li>2 eggs</li>
+                    <li>1.5 cups chocolate chips</li>
+                </ul>
+                <h4>Instructions:</h4>
+                <ol>
+                    <li>In a saucepan, melt butter until it foams and brown specks form, then let cool.</li>
+                    <li>Beat the browned butter with both sugars, then mix in the eggs.</li>
+                    <li>Stir in the flour until just combined, then fold in the chocolate chips.</li>
+                    <li>Scoop dough onto a baking sheet and bake at 175°C for 10-12 minutes.</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- RECIPE 2 -->
+        <div class="recipe-card">
+            <div class="recipe-photo">
+                <img src="assets/images/dessert/recipe2.jpg" alt="Campfire S'mores Skillet Dip">
+            </div>
+            <div class="recipe-text">
+                <h3>Campfire S'mores Skillet Dip</h3>
+                <p>A fun, interactive dessert that brings the outdoor campfire experience straight to your kitchen.</p>
+                <h4>Ingredients:</h4>
+                <ul>
+                    <li>1.5 cups chocolate chips</li>
+                    <li>1 bag large marshmallows</li>
+                    <li>1 box Tennis biscuits (for dipping)</li>
+                </ul>
+                <h4>Instructions:</h4>
+                <ol>
+                    <li>Preheat oven to 230°C.</li>
+                    <!-- Fixed Imperial Measurement: 8-inch skillet to 20 cm -->
+                    <li>Pour the chocolate chips into the bottom of a 20 cm cast-iron skillet in an even layer.</li>
+                    <li>Arrange the marshmallows in a single layer completely covering the chocolate.</li>
+                    <li>Bake for 5-7 minutes until marshmallows are toasted brown, and serve with biscuits.</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- RECIPE 3 -->
+        <div class="recipe-card">
+            <div class="recipe-photo">
+                <img src="assets/images/dessert/recipe3.jpg" alt="No-Bake Mixed Berry Cheesecake">
+            </div>
+            <div class="recipe-text">
+                <h3>No-Bake Mixed Berry Cheesecake</h3>
+                <p>A cool, vibrant presentation requiring zero oven time, featuring a fresh berry topping.</p>
+                <h4>Ingredients:</h4>
+                <ul>
+                    <li>1.5 cups Tennis biscuit crumbs</li>
+                    <li>1/3 cup melted butter</li>
+                    <li>450g cream cheese (softened)</li>
+                    <li>1/2 cup powdered sugar</li>
+                    <li>1 tsp vanilla</li>
+                    <li>1 cup mixed berry compote</li>
+                </ul>
+                <h4>Instructions:</h4>
+                <ol>
+                    <li>Mix Tennis biscuit crumbs and melted butter, pressing firmly into the bottom of a pie dish to form a crust.</li>
+                    <li>Beat the cream cheese, powdered sugar, and vanilla until completely smooth.</li>
+                    <li>Spread the cream cheese mixture evenly over the crust and chill for 4 hours.</li>
+                    <li>Top with the mixed berry compote right before serving.</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- RECIPE 4 -->
+        <div class="recipe-card">
+            <div class="recipe-photo">
+                <img src="assets/images/dessert/recipe4.jpg" alt="Lemon Olive Oil Cake">
+            </div>
+            <div class="recipe-text">
+                <h3>Lemon Olive Oil Cake</h3>
+                <p>A sophisticated, unique flavor profile yielding a wonderfully moist cake with a bright citrus finish.</p>
+                <h4>Ingredients:</h4>
+                <ul>
+                    <li>1.5 cups all-purpose flour</li>
+                    <li>1 cup sugar</li>
+                    <li>3 eggs</li>
+                    <li>1/2 cup extra-virgin olive oil</li>
+                    <li>1/2 cup milk</li>
+                    <li>2 tbsp lemon zest</li>
+                    <li>2 tbsp lemon juice</li>
+                </ul>
+                <h4>Instructions:</h4>
+                <ol>
+                    <li>Preheat oven to 175°C and grease a 30 cm round cake pan.</li>
+                    <li>Whisk the eggs and sugar until pale, then gradually whisk in the olive oil, milk, lemon zest, and juice.</li>
+                    <li>Gently fold the flour into the wet ingredients until no lumps remain.</li>
+                    <li>Pour the batter into the pan and bake for 35-40 minutes until a toothpick comes out clean.</li>
+                </ol>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-col">
+            <img src="assets/images/logo1.png" width="50" height="50" alt="Phantom Recipes Logo">
+            <p><em> A host to new and interesting recipes. </em></p>
+        </div>
+        <div class="footer-col">
+            <p>From breakfast to dinner (including dessert), Phantom Recipes has got you covered with all kinds of recipes that never disappoint.</p>
+        </div>
+        <div class="footer-col">
+            <p>Explore categories:</p>
+            <ul>
+                <li><a href="breakfast.html">Breakfast</a></li>
+                <li><a href="lunch.html">Lunch</a></li>
+                <li><a href="dinner.html">Dinner</a></li>
+                <li><a href="dessert.html">Dessert</a></li>
+                <li><a href="quick.html">Quick Snack</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <p>Quick Links:</p>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
 </html>
