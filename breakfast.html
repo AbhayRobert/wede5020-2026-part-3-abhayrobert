@@ -1,12 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First HTML Page</title>
-  </head>
-  <body>
-    <h1>Hello, Web!</h1>
-    <p>This is the body of the document.</p>
-  </body>
+    <title>Phantom Recipes | Breakfast</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Main Navigation Bar -->
+    <header>
+        <div>
+            <img src="assets/images/logo1.png" width="80" height="80" alt="Phantom Recipes Logo">
+            <strong>Phantom Recipes</strong>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+
+        <div>
+            <a href="enquiry.html" class="btn-orange">Submit a Recipe</a>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h2>Breakfast Recipes</h2>
+        <p>Start your morning right with these delicious ideas.</p>
+    </div>
+
+    <!-- Breakfast Recipes List -->
+    <div class="recipe-list">
+
+        <!-- RECIPE 1 -->
+        <div class="recipe-card">
+            <div class="recipe-photo">
+                <img src="assets/images/breakfast/recipe1.jpg" alt="Classic Fluffy Buttermilk Pancakes">
+            </div>
+            <div class="recipe-text">
+                <h3>Classic Fluffy Buttermilk Pancakes</h3>
+                <p>A comforting breakfast classic featuring golden-brown, thick pancakes with a soft, fluffy interior.</p>
+                
+                <h4>Ingredients:</h4>
+                <ul>
+                    <li>2 cups all-purpose flour</li>
+                    <li>2 tbsp sugar</li>
+                    <li>2 tsp baking powder</li>
+                    <li>1 tsp baking soda</li>
+                    <li>2 cups buttermilk</li>
+                    <li>2 large eggs</li>
+                    <li>1/4 cup melted butter</li>
+                </ul>
+
+                <h4>Instructions:</h4>
+                <ol>
+                    <li>Whisk dry ingredients together in a large bowl. </li>
+                    <li>Mix buttermilk, eggs, and melted butter in a separate jug.</li>
+                    <li>Fold wet ingredients into dry until just combined.</li>
+                    <li>Pour batter onto a hot greased griddle, flip when bubbles form, and cook until golden brown.</li>
+                </ol>
+            </div>
+        </div>
+
+         <!-- RECIPE 2 -->
+        <div class="recipe-card">
+            <div class="recipe-photo">
+                <img src="assets/images/breakfast/recipe2.jpg" alt="Smoked Salmon and Avocado Toast">
+            </div>
+            <div class="recipe-text">
+                <h3>Smoked Salmon and Avocado Toast</h3>
+                <p>A high-protein, 10-minute meal with creamy avocado and savory smoked salmon on crusty sourdough bread.</p>
+                
+                <h4>Ingredients:</h4>
+                <ul>
+                    <li>2 slices sourdough bread</li>
+                    <li>1 ripe avocado</li>
+                    <li>120g smoked salmon</li>
+                    <li>1 tbsp lemon juice</li>
+                    <li>Salt</li>
+                    <li>Black pepper</li>
+                    <li>Red pepper flakes</li>
+                </ul>
+
+                <h4>Instructions:</h4>
+                <ol>
+                    <li>Toast the sourdough slices until crisp.</li>
+                    <li>Mash the avocado with lemon juice, salt, and pepper.</li>
+                    <li>Spread the avocado evenly over the toast.</li>
+                    <li>Top with smoked salmon and a sprinkle of red pepper flakes.</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- RECIPE 3 -->
+        <div class="recipe-card">
+            <div class="recipe-photo">
+                <img src="assets/images/breakfast/recipe3.jpg" alt="Berry & Chia Seed Overnight Oats">
+            </div>
+            <div class="recipe-text">
+                <h3>Berry & Chia Seed Overnight Oats</h3>
+                <p>A vegan-adaptable, make-ahead breakfast packed with fiber, fresh berries, and wholesome oats.</p>
+                
+                <h4>Ingredients:</h4>
+                <ul>
+                    <li>1/2 cup rolled oats</li>
+                    <li>1/2 cup almond milk</li>
+                    <li>1 tbsp chia seeds</li>
+                    <li>1 tbsp maple syrup</li>
+                    <li>1/4 cup mixed fresh berries</li>
+                </ul>
+
+                <h4>Instructions:</h4>
+                <ol>
+                    <li>In a jar, combine oats, almond milk, chia seeds, and maple syrup.</li>
+                    <li>Stir well to ensure chia seeds are evenly distributed.</li>
+                    <li>Top with fresh berries.</li>
+                    <li>Cover and refrigerate for at least 4 hours or overnight before serving.</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- RECIPE 4 -->
+        <div class="recipe-card">
+            <div class="recipe-photo">
+                <img src="assets/images/breakfast/recipe4.jpg" alt="Spicy Shakshuka with Feta">
+            </div>
+            <div class="recipe-text">
+                <h3>Spicy Shakshuka with Feta</h3>
+                <p>A visually striking, one-pan Mediterranean dish of poached eggs in a robust, spiced tomato sauce.</p>
+                
+                <h4>Ingredients:</h4>
+                <ul>
+                    <li>1 tbsp olive oil</li>
+                    <li>1 diced onion</li>
+                    <li>1 diced red bell pepper</li>
+                    <li>2 cloves minced garlic</li>
+                    <li>1 can crushed tomatoes</li>
+                    <li>1 tsp cumin</li>
+                    <li>1 tsp paprika</li>
+                    <li>4 large eggs</li>
+                    <li>1/4 cup crumbled feta cheese</li>
+                </ul>
+
+                <h4>Instructions:</h4>
+                <ol>
+                    <li>Sauté onion, bell pepper, and garlic in olive oil until soft.</li>
+                    <li>Stir in crushed tomatoes, cumin, and paprika, and simmer for 10 minutes.</li>
+                    <li>Make 4 small wells in the sauce and crack an egg into each.</li>
+                    <li>Cover and cook for 5-8 minutes until eggs are set, then top with crumbled feta.</li>
+                </ol>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-col">
+            <img src="assets/images/logo1.png" width="50" height="50" alt="Phantom Recipes Logo">
+            <p><em> A host to new and interesting recipes. </em></p>
+        </div>
+        <div class="footer-col">
+            <p>From breakfast to dinner (including dessert), Phantom Recipes has got you covered with all kinds of recipes that never disappoint.</p>
+        </div>
+        <div class="footer-col">
+            <p>Explore categories:</p>
+            <ul>
+                <li><a href="breakfast.html">Breakfast</a></li>
+                <li><a href="lunch.html">Lunch</a></li>
+                <li><a href="dinner.html">Dinner</a></li>
+                <li><a href="dessert.html">Dessert</a></li>
+                <li><a href="quick.html">Quick Snack</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <p>Quick Links:</p>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
 </html>
