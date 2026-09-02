@@ -1,12 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First HTML Page</title>
-  </head>
-  <body>
-    <h1>Hello, Web!</h1>
-    <p>This is the body of the document.</p>
-  </body>
+    <title>Phantom Recipes | Home</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Main Navigation Bar -->
+    <header>
+        <div>
+            <img src="assets/images/logo1.png" width="80" height="80" alt="Phantom Recipes Logo">
+            <strong>Phantom Recipes</strong>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+
+        <div>
+            <a href="enquiry.html" class="btn-orange">Submit a Recipe</a>
+        </div>
+    </header>
+
+    <!-- Hero Area & Search Section -->
+    <div class="hero">
+        <h2>Never have a bland meal again.</h2>
+        <p>From morning till night, we've got all kinds of recipes for you.</p>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+            <button class="btn-orange">Search</button>
+        </div>
+
+        <div class="hero-tags">
+            <span><a href="breakfast.html">Breakfast</a></span>
+            <span><a href="lunch.html">Lunch</a></span>
+            <span><a href="dinner.html">Dinner</a></span>
+            <span><a href="dessert.html">Dessert</a></span>
+            <span><a href="quick.html">Quick Snacks</a></span>
+        </div>
+    </div>
+
+    <!-- Category Highlights Section -->
+    <div class="categories">
+        <h2>What are you making today?</h2>
+        <p>Explore recipes for all times of the day:</p>
+
+        <div class="card-container">
+            <div class="card">
+                <div class="card-image"><img src="assets/images/breakfast1.jpg" alt="Breakfast image"><br></div>
+                <div class="card-footer">
+                    <p>Check out new ideas for every morning.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-image"><img src="assets/images/lunch.jpg" alt="Lunch image"><br></div>
+                <div class="card-footer">
+                    <p>Mid day recipes to entertain anyone.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image"><img src="assets/images/dinner.jpg" alt="Dinner image"><br></div>
+                <div class="card-footer">
+                    <p>Late or early? We've got you covered.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image"><img src="assets/images/dessert.jpg" alt="Dessert image"><br></div>
+                <div class="card-footer">
+                    <p>Fancy something sweet? Check out your new dessert recipe.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Recipe of the Day -->
+    <div class="featured-recipe">
+        <h2>Featured Recipe</h2>
+        
+        <div class="recipe-box">
+            <div class="recipe-image">
+                <img src="assets/images/dessert/recipe4.jpg" alt="Lemon Olive Oil Cake">
+            </div>
+            
+            <div class="recipe-details">
+                <h3>Lemon Olive Oil Cake</h3>
+                <p>A sophisticated, unique flavor profile yielding a wonderfully moist cake with a bright citrus finish.</p>
+                <h4>Ingredients:</h4>
+                <ul>
+                    <li>1.5 cups all-purpose flour</li>
+                    <li>1 cup sugar</li>
+                    <li>3 eggs</li>
+                    <li>1/2 cup extra-virgin olive oil</li>
+                    <li>1/2 cup milk</li>
+                    <li>2 tbsp lemon zest</li>
+                    <li>2 tbsp lemon juice</li>
+                </ul>
+                <h4>Instructions:</h4>
+                <ol>
+                    <li>Preheat oven to 175°C and grease a 30 cm round cake pan.</li>
+                    <li>Whisk the eggs and sugar until pale, then gradually whisk in the olive oil, milk, lemon zest, and juice.</li>
+                    <li>Gently fold the flour into the wet ingredients until no lumps remain.</li>
+                    <li>Pour the batter into the pan and bake for 35-40 minutes until a toothpick comes out clean.</li>
+                </ol>
+
+                <a href="dessert.html" class="btn-orange">View Dessert Recipes</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-col">
+            <img src="assets/images/logo1.png" width="50" height="50" alt="Phantom Recipes Logo">
+            <p><em> A host to new and interesting recipes. </em></p>
+        </div>
+        <div class="footer-col">
+            <p>From breakfast to dinner (including dessert), Phantom Recipes has got you covered with all kinds of recipes that never disappoint.</p>
+        </div>
+        <div class="footer-col">
+            <p>Explore categories:</p>
+            <ul>
+                <li><a href="breakfast.html">Breakfast</a></li>
+                <li><a href="lunch.html">Lunch</a></li>
+                <li><a href="dinner.html">Dinner</a></li>
+                <li><a href="dessert.html">Dessert</a></li>
+                <li><a href="quick.html">Quick Snack</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <p>Quick Links:</p>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
 </html>
