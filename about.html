@@ -1,12 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First HTML Page</title>
-  </head>
-  <body>
-    <h1>Hello, Web!</h1>
-    <p>This is the body of the document.</p>
-  </body>
+    <title>Phantom Recipes | About Us</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Main Navigation Bar -->
+    <header>
+        <div>
+            <img src="assets/images/logo1.png" width="80" height="80" alt="Phantom Recipes Logo">
+            <strong>Phantom Recipes</strong>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About Us</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+
+        <div>
+            <a href="enquiry.html" class="btn-orange">Submit a Recipe</a>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h2>About Phantom Recipes</h2>
+        <p>Bringing taste, variety, and secret family dishes straight to your kitchen.</p>
+    </div>
+
+    <!-- Company Story Section -->
+    <div class="about-story">
+        <div class="story-text">
+            <h2>Our Story</h2>
+            <p>Phantom Recipes started with a simple idea: good food shouldn't be complicated or boring. We created a platform where food lovers of all skill levels can discover new ideas for every meal time.</p>
+            <p>Whether you need a quick 15-minute breakfast before class or a full multi-course dinner for family, Phantom Recipes helps you eliminate bland meals forever.</p>
+        </div>
+        <div class="story-image">
+            <img src="assets/images/kitchen.jpg" alt="Kitchen Cooking Placeholder">
+        </div>
+    </div>
+
+    <!-- Core Values Section -->
+    <div class="values-section">
+        <h2>Why Phantom Recipes?</h2>
+        <p>Here is what makes our community unique:</p>
+
+        <div class="card-container">
+            <div class="value-card">
+                <h3>Easy Instructions</h3>
+                <p>Simple step-by-step guides designed for home cooks and busy schedules.</p>
+            </div>
+            <div class="value-card">
+                <h3>All-Day Meal Plans</h3>
+                <p>Recipes neatly organized for breakfast, lunch, dinner, and dessert.</p>
+            </div>
+            <div class="value-card">
+                <h3>Community Driven</h3>
+                <p>Shared dishes and secret recipes contributed by creators like you.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-col">
+            <img src="assets/images/logo1.png" width="50" height="50" alt="Phantom Recipes Logo">
+            <p><em> A host to new and interesting recipes. </em></p>
+        </div>
+        <div class="footer-col">
+            <p>From breakfast to dinner (including dessert), Phantom Recipes has got you covered with all kinds of recipes that never disappoint.</p>
+        </div>
+        <div class="footer-col">
+            <p>Explore categories:</p>
+            <ul>
+                <li><a href="breakfast.html">Breakfast</a></li>
+                <li><a href="lunch.html">Lunch</a></li>
+                <li><a href="dinner.html">Dinner</a></li>
+                <li><a href="dessert.html">Dessert</a></li>
+                <li><a href="quick.html">Quick Snack</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <p>Quick Links:</p>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
 </html>
