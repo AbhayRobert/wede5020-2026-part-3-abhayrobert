@@ -1,12 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First HTML Page</title>
-  </head>
-  <body>
-    <h1>Hello, Web!</h1>
-    <p>This is the body of the document.</p>
-  </body>
+    <title>Phantom Recipes | All Recipes</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Main Navigation Bar -->
+    <header>
+        <div>
+            <img src="assets/images/logo1.png" width="80" height="80" alt="Phantom Recipes Logo">
+            <strong>Phantom Recipes</strong>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="recipes.html" class="active">Recipes</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+
+        <div>
+            <a href="enquiry.html" class="btn-orange">Submit a Recipe</a>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h2>Explore Recipe Categories</h2>
+        <p>Find the perfect dish for any time of day, all in one place.</p>
+    </div>
+
+    <!-- Recipe Categories Grid -->
+    <div class="categories-section">
+        <div class="card-container">
+            
+            <a href="breakfast.html" class="card">
+                <div class="card-image">
+                    <img src="assets/images/breakfast1.jpg" alt="Breakfast">
+                </div>
+                <div class="card-footer">
+                    <h3>Breakfast</h3>
+                    <p>Start your morning right with these delicious ideas.</p>
+                </div>
+            </a>
+
+            <a href="lunch.html" class="card">
+                <div class="card-image">
+                    <img src="assets/images/lunch.jpg" alt="Lunch">
+                </div>
+                <div class="card-footer">
+                    <h3>Lunch</h3>
+                    <p>Midday meals to keep you fueled and focused.</p>
+                </div>
+            </a>
+
+            <a href="dinner.html" class="card">
+                <div class="card-image">
+                    <img src="assets/images/dinner.jpg" alt="Dinner">
+                </div>
+                <div class="card-footer">
+                    <h3>Dinner</h3>
+                    <p>Hearty, satisfying evening dishes for everyone.</p>
+                </div>
+            </a>
+
+            <a href="dessert.html" class="card">
+                <div class="card-image">
+                    <img src="assets/images/dessert.jpg" alt="Dessert">
+                </div>
+                <div class="card-footer">
+                    <h3>Dessert</h3>
+                    <p>Sweet treats to perfectly end your day.</p>
+                </div>
+            </a>
+
+            <a href="quick.html" class="card">
+                <div class="card-image">
+                    <img src="assets/images/quick.jpg" alt="Quick Snacks">
+                </div>
+                <div class="card-footer">
+                    <h3>Quick Snacks</h3>
+                    <p>Fast and easy bites for when you are on the go.</p>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-col">
+            <img src="assets/images/logo1.png" width="50" height="50" alt="Phantom Recipes Logo">
+            <p><em> A host to new and interesting recipes. </em></p>
+        </div>
+        <div class="footer-col">
+            <p>From breakfast to dinner (including dessert), Phantom Recipes has got you covered with all kinds of recipes that never disappoint.</p>
+        </div>
+        <div class="footer-col">
+            <p>Explore categories:</p>
+            <ul>
+                <li><a href="breakfast.html">Breakfast</a></li>
+                <li><a href="lunch.html">Lunch</a></li>
+                <li><a href="dinner.html">Dinner</a></li>
+                <li><a href="dessert.html">Dessert</a></li>
+                <li><a href="quick.html">Quick Snack</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <p>Quick Links:</p>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
 </html>
