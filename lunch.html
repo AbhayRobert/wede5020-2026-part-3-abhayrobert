@@ -1,12 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First HTML Page</title>
-  </head>
-  <body>
-    <h1>Hello, Web!</h1>
-    <p>This is the body of the document.</p>
-  </body>
+    <title>Phantom Recipes | Lunch</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Main Navigation Bar -->
+    <header>
+        <div>
+            <img src="assets/images/logo1.png" width="80" height="80" alt="Phantom Recipes Logo">
+            <strong>Phantom Recipes</strong>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+
+        <div>
+            <a href="enquiry.html" class="btn-orange">Submit a Recipe</a>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h2>Lunch Recipes</h2>
+        <p>Your lunch won't be boring again.</p>
+    </div>
+
+    <!-- Lunch Recipes List -->
+    <div class="recipe-list">
+
+        <!-- RECIPE 1 -->
+        <div class="recipe-card">
+            <div class="recipe-photo">
+                <img src="assets/images/lunch/recipe1.jpg" alt="Grilled Chicken Caesar Salad Wrap">
+            </div>
+            <div class="recipe-text">
+                <h3>Grilled Chicken Caesar Salad Wrap</h3>
+                <p> A familiar staple reinvented as a handheld meal, featuring crisp romaine and tender grilled chicken.</p>
+                
+                <h4>Ingredients:</h4>
+                <ul>
+                    <li>1 large flour tortilla</li>
+                    <li>1/2 cup sliced grilled chicken breast</li>
+                    <li>1 cup chopped romaine lettuce</li>
+                    <li>2 tbsp Caesar dressing</li>
+                    <li>1 tbsp grated Parmesan cheese</li>
+                </ul>
+
+                <h4>Instructions:</h4>
+                <ol>
+                    <li>Lay the tortilla flat on a clean surface.</li>
+                    <li>Toss the romaine lettuce and grilled chicken with Caesar dressing.</li>
+                    <li>Place the salad mixture in the center of the tortilla and sprinkle with Parmesan. </li>
+                    <li>Fold the sides inward and roll tightly into a wrap.</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- RECIPE 2 -->
+        <div class="recipe-card">
+            <div class="recipe-photo">
+                <img src="assets/images/lunch/recipe2.jpg" alt="Quinoa and Roasted Chickpea Bowl">
+            </div>
+            <div class="recipe-text">
+                <h3>Quinoa and Roasted Chickpea Bowl</h3>
+                <p>A vibrant, high-fiber vegan bowl loaded with plant-based protein and fresh vegetables.</p>
+                
+                <h4>Ingredients:</h4>
+                <ul>
+                    <li>1/2 cup cooked quinoa</li>
+                    <li>1/2 cup roasted spiced chickpeas</li>
+                    <li>1/2 cup halved cherry tomatoes</li>
+                    <li>1/4 cup diced cucumber</li>
+                    <!-- Missing li closing tag fixed -->
+                    <li>2 tbsp tahini dressing</li>
+                </ul>
+
+                <h4>Instructions:</h4>
+                <ol>
+                    <li>Place the cooked quinoa as the base in a serving bowl.</li>
+                    <li>Arrange the roasted chickpeas, tomatoes, and cucumber over the quinoa. </li>
+                    <li>Drizzle the tahini dressing evenly over the top.</li>
+                    <li>Toss gently before eating</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- RECIPE 3 -->
+        <div class="recipe-card">
+            <div class="recipe-photo">
+                <img src="assets/images/lunch/recipe3.jpg" alt="Caprese Panini with Fresh Basil Pesto">
+            </div>
+            <div class="recipe-text">
+                <h3>Caprese Panini with Fresh Basil Pesto</h3>
+                <p>A quick-prep, vegetarian Italian sandwich bursting with melted mozzarella and fresh tomatoes.</p>
+                
+                <h4>Ingredients:</h4>
+                <ul>
+                    <li>2 slices ciabatta bread</li>
+                    <li>2 slices fresh mozzarella</li>
+                    <li>1 sliced Roma tomato</li>
+                    <li>2 tbsp fresh basil pesto</li>
+                    <li>1 tbsp olive oil</li>
+                </ul>
+
+                <h4>Instructions:</h4>
+                <ol>
+                    <li>Spread pesto evenly on the inside of both ciabatta slices. </li>
+                    <li>Layer the mozzarella and tomato slices between the bread. </li>
+                    <li>Brush the outside of the sandwich with olive oil. </li>
+                    <li>Grill in a panini press or skillet for 3-4 minutes per side until the cheese melts.</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- RECIPE 4 -->
+        <div class="recipe-card">
+            <div class="recipe-photo">
+                <img src="assets/images/lunch/recipe4.jpg" alt="Spicy Peanut Soba Noodles">
+            </div>
+            <div class="recipe-text">
+                <h3>Spicy Peanut Soba Noodles</h3>
+                <p>A 15-minute dairy-free noodle dish featuring a rich, savory, and slightly spicy peanut sauce.</p>
+                
+                <h4>Ingredients:</h4>
+                <ul>
+                    <li>120g soba noodles</li>
+                    <li>2 tbsp peanut butter</li>
+                    <li>1 tbsp soy sauce</li>
+                    <li>1 tbsp sriracha</li>
+                    <li>1 tsp sesame oil</li>
+                    <li>1 chopped green onion</li>
+                </ul>
+
+                <h4>Instructions:</h4>
+                <ol>
+                    <li>Boil the soba noodles according to package directions, then drain and rinse with cold water. </li>
+                    <li>Whisk the peanut butter, soy sauce, sriracha, and sesame oil together until smooth. </li>
+                    <li>Toss the noodles in the sauce until fully coated.</li> 
+                    <li>Garnish with chopped green onions before serving.</li>
+                </ol>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-col">
+            <img src="assets/images/logo1.png" width="50" height="50" alt="Phantom Recipes Logo">
+            <p><em> A host to new and interesting recipes. </em></p>
+        </div>
+        <div class="footer-col">
+            <p>From breakfast to dinner (including dessert), Phantom Recipes has got you covered with all kinds of recipes that never disappoint.</p>
+        </div>
+        <div class="footer-col">
+            <p>Explore categories:</p>
+            <ul>
+                <li><a href="breakfast.html">Breakfast</a></li>
+                <li><a href="lunch.html">Lunch</a></li>
+                <li><a href="dinner.html">Dinner</a></li>
+                <li><a href="dessert.html">Dessert</a></li>
+                <li><a href="quick.html">Quick Snack</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <p>Quick Links:</p>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
 </html>
