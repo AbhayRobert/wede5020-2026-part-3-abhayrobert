@@ -25,6 +25,29 @@ body {
     color: #333333;
 }
 
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    line-height: 1.6;
+}
 /* Navigation Bar */
 header {
     padding: 15px 30px;
