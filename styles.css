@@ -426,7 +426,7 @@ footer {
 }
 
 /* Responsive Design */
-
+/* Tablet Compatability */
 @media (max-width: 900px) {
 
     header {
@@ -458,6 +458,7 @@ footer {
     }
 }
 
+/* Mobile Compatability */
 @media (max-width: 500px) {
 
     header {
