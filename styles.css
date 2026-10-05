@@ -1,8 +1,4 @@
-/* 
-   PART 1: structural essential pieces were only coded
-   (No colors, background fills, or rounded corners)
-*/
-
+/* Global Styles */ 
 /* CSS Reset */
 * {
     margin: 0;
@@ -21,6 +17,8 @@ img {
 /* Basic Page Setup */
 body {
     font-family: "Roboto", Arial;
+    font-size: 1rem;
+    line-height: 1.6;
     background-color: #F8F9FA; 
     color: #333333;
 }
@@ -48,13 +46,14 @@ h3 {
 p {
     line-height: 1.6;
 }
+
 /* Navigation Bar */
 header {
+    background-color: #F8F9FA;
     padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #ccc;
 }
 
 .nav-links {
@@ -67,51 +66,52 @@ header {
 
 .nav-links a {
     text-decoration: none;
-    color: #000;
+    color: #333;
+    background-color: #E9ECEF;
     padding: 8px 15px;
-    border: 1px solid #ccc;
+    border-radius: 15px;
 }
 
 .nav-links a.active {
-    font-weight: bold;
-    border: 1px solid #000;
+    background-color: #2A9D8F;
+    color: white;
 }
 
 /* Reusable Action Button */
 .btn-orange {
+    background-color: #E76F51; 
+    color: white;
     padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
-    color: #000;
-    background-color: transparent;
-    border: 1px solid #000;
 }
 
 /* Hero Area Header */
 .hero {
+    background-color: #2A9D8F; 
+    color: white;
     text-align: center;
-    padding: 60px 20px;
-    border-bottom: 1px solid #ccc;
+    padding: 4rem 1.25rem;
 }
 
 /* Footer Container and Columns */
 footer {
+    background-color: #F8F9FA;
     padding: 40px 30px;
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid #000;
+    border-top: 2px solid #E76F51;
     margin-top: 20px;
 }
 
-.footer-col { 
-    width: 20%; 
-}
-
+.footer-col { width: 20%; }
 .footer-col a {
-    color: #000;
-    text-decoration: underline;
+    color: #333;
+    text-decoration: none;
 }
 
 /*
