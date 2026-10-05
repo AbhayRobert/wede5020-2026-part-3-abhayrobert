@@ -457,3 +457,73 @@ footer {
         width: calc(50% - 10px);
     }
 }
+
+@media (max-width: 500px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 3rem 1rem;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .about-story,
+    .recipe-card,
+    .contact-container,
+    .recipe-box {
+        flex-direction: column;
+    }
+
+    .story-text,
+    .story-image,
+    .recipe-photo,
+    .recipe-text,
+    .contact-col,
+    .recipe-box .recipe-image,
+    .recipe-details {
+        width: 100%;
+    }
+
+    .recipe-text {
+        padding-left: 0;
+        padding-top: 20px;
+    }
+
+    .categories .card {
+        width: 100%;
+    }
+
+    .value-card {
+        width: 100%;
+    }
+
+    .categories-section .card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .form-container {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .footer-col {
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
