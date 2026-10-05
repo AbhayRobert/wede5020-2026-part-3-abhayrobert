@@ -3,12 +3,26 @@
    (No colors, background fills, or rounded corners)
 */
 
-/* Basic Page Setup */
-body {
-    font-family: Arial, sans-serif;
+/* CSS Reset */
+* {
     margin: 0;
     padding: 0;
-    color: #000000;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+/* Basic Page Setup */
+body {
+    font-family: "Roboto", Arial;
+    background-color: #F8F9FA; 
+    color: #333333;
 }
 
 /* Navigation Bar */
