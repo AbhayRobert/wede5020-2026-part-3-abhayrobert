@@ -186,4 +186,45 @@ document.addEventListener('DOMContentLoaded', function () {
             summary.scrollIntoView({ behavior: 'smooth' });
         });
     }
+
+    /* contact form: validate + mailto
+       a pre-formatted mailto link and opens the default email site with subject and body populated. */
+    var contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        var cFeedback = document.getElementById('contact-feedback');
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            ['name', 'email', 'subject', 'message'].forEach(function (id) { setError(id, ''); });
+            cFeedback.className = 'form-feedback';
+
+            var name = document.getElementById('name').value.trim();
+            var email = contactForm['email'].value.trim();
+            var subject = contactForm['subject'].value.trim();
+            var message = contactForm['message'].value.trim();
+
+            var ok = true;
+            if (!name) { setError('name', 'Please enter your name.'); ok = false; }
+            if (!isEmail(email)) { setError('email', 'Please enter a valid email address.'); ok = false; }
+            if (!subject) { setError('subject', 'Please enter a subject.'); ok = false; }
+            if (message.length < 10) { setError('message', 'Please enter a longer message.'); ok = false; }
+
+            if (!ok) {
+                cFeedback.className = 'form-feedback error';
+                cFeedback.textContent = 'Please correct the highlighted fields.';
+                return;
+            }
+
+            var body = 'Name: ' + name + '\n' +
+                       'Email: ' + email + '\n\n' +
+                       message + '\n\n-- Sent via the Phantom Recipes contact form';
+            var mailto = 'mailto:ST10534638@myemeris.edu.za' +
+                '?subject=' + encodeURIComponent('[Contact] ' + subject) +
+                '&body=' + encodeURIComponent(body);
+            window.location.href = mailto;
+
+            cFeedback.className = 'form-feedback success';
+            cFeedback.textContent = 'Opening your email app so you can send the message to our team...';
+        });
+    }
+
 });
