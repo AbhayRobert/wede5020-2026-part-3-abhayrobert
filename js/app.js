@@ -1,9 +1,128 @@
 document.addEventListener('DOMContentLoaded', function () {
+/* Phantom Recipes - app.js */
+    /* Gallery filter & search
+       visitors can quickly locate recipe photos by
+       category or keyword instead of scrolling the whole collection. 
+    */
+ 
+    var grid = document.getElementById('gallery-grid');
+    if (grid) {
+        var items = Array.prototype.slice.call(grid.querySelectorAll('.gallery-item'));
+        var filterBtns = document.querySelectorAll('.filter-btn');
+        var searchInput = document.getElementById('gallery-search-input');
+        var feedback = document.getElementById('gallery-feedback');
+        var activeCategory = 'all';
+
+        function applyFilters() {
+            var term = searchInput ? searchInput.value.trim().toLowerCase() : '';
+            var visible = 0;
+            items.forEach(function (item) {
+                var cat = item.getAttribute('data-category');
+                var text = (item.getAttribute('data-title') || '').toLowerCase();
+                var matchCat = (activeCategory === 'all' || cat === activeCategory);
+                var matchTerm = (term === '' || text.indexOf(term) !== -1 || cat.toLowerCase().indexOf(term) !== -1);
+                if (matchCat && matchTerm) {
+                    item.classList.remove('hidden');
+                    visible++;
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+            if (feedback) {
+                if (visible === 0) {
+                    feedback.textContent = 'No recipes found' +
+                        (term ? ' for "' + term + '"' : '') + '. Try another category or keyword.';
+                } else {
+                    feedback.textContent = 'Showing ' + visible + ' recipe' +
+                        (visible === 1 ? '' : 's') +
+                        (activeCategory === 'all' ? '' : ' in ' + activeCategory) +
+                        (term ? ' matching "' + term + '"' : '') + '.';
+                }
+            }
+            rebuildLightboxList();
+        }
+
+        filterBtns.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                filterBtns.forEach(function (b) { b.classList.remove('active'); });
+                btn.classList.add('active');
+                activeCategory = btn.getAttribute('data-filter');
+                applyFilters();
+            });
+        });
+
+        if (searchInput) {
+            searchInput.addEventListener('input', applyFilters);
+            // Pre-fill from ?search= passed by the home page search box.
+            var params = new URLSearchParams(window.location.search);
+            if (params.get('search')) {
+                searchInput.value = params.get('search');
+            }
+        }
+
+        /* lightbox */
+        var lightbox = document.getElementById('lightbox');
+        var lbImg = document.getElementById('lightbox-img');
+        var lbCaption = document.getElementById('lightbox-caption');
+        var currentList = [];
+        var currentIndex = 0;
+
+        function rebuildLightboxList() {
+            currentList = items.filter(function (i) { return !i.classList.contains('hidden'); });
+        }
+
+        function openLightbox(item) {
+            rebuildLightboxList();
+            currentIndex = currentList.indexOf(item);
+            showCurrent();
+            lightbox.classList.add('open');
+            lightbox.setAttribute('aria-hidden', 'false');
+            document.getElementById('lightbox-close').focus();
+        }
+        function showCurrent() {
+            var item = currentList[currentIndex];
+            if (!item) { return; }
+            var img = item.querySelector('img');
+            lbImg.src = img.getAttribute('data-full') || img.src;
+            lbImg.alt = img.alt;
+            lbCaption.textContent = item.getAttribute('data-title') + ' \u2014 ' + item.getAttribute('data-category');
+        }
+        function closeLightbox() {
+            lightbox.classList.remove('open');
+            lightbox.setAttribute('aria-hidden', 'true');
+        }
+        function nextImg() { currentIndex = (currentIndex + 1) % currentList.length; showCurrent(); }
+        function prevImg() { currentIndex = (currentIndex - 1 + currentList.length) % currentList.length; showCurrent(); }
+
+        if (lightbox) {
+            items.forEach(function (item) {
+                item.addEventListener('click', function () { openLightbox(item); });
+            });
+            document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+            document.getElementById('lightbox-next').addEventListener('click', nextImg);
+            document.getElementById('lightbox-prev').addEventListener('click', prevImg);
+            lightbox.addEventListener('click', function (e) {
+                if (e.target === lightbox) { closeLightbox(); }
+            });
+            document.addEventListener('keydown', function (e) {
+                if (!lightbox.classList.contains('open')) { return; }
+                if (e.key === 'Escape') { closeLightbox(); }
+                if (e.key === 'ArrowRight') { nextImg(); }
+                if (e.key === 'ArrowLeft') { prevImg(); }
+            });
+        }
+
+        applyFilters();
+    }
+
+});
+
+document.addEventListener('DOMContentLoaded', function () {
 
     function isEmail(v) {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
     }
-    
+
     function setError(el, msg) {
         var box = document.getElementById(el + '-error');
         if (box) { box.textContent = msg || ''; }

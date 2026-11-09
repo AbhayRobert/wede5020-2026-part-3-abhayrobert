@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Phantom Recipes | Home">
+    <meta property="og:description" content="Phantom Recipes is a free recipe collection for breakfast, lunch, dinner, dessert and quick snacks. Discover easy, step-by-step meals for every time of day.">
+    <meta property="og:type" content="website">
+    <title>Phantom Recipes | Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header>
+        <div>
+            <img src="assets/images/logo1.png" width="80" height="80" alt="Phantom Recipes Logo">
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div>
+            <a href="enquiry.html" class="btn-orange">Submit a Recipe</a>
+        </div>
+    </header>
+
+    <div class="hero" id="main">
+        <h2>Recipe Gallery</h2>
+        <p>Browse our collection &mdash; filter by category or search by name, then click any photo to enlarge it.</p>
+    </div>
+
+    <section class="gallery-section">
+        <div class="gallery-controls">
+            <div class="gallery-search">
+                <label for="gallery-search-input" class="skip-link">Search recipes</label>
+                <input type="text" id="gallery-search-input" placeholder="Search recipes by name..." aria-label="Search recipes by name">
+            </div>
+            <div class="filter-buttons" role="group" aria-label="Filter gallery by category">
+                <button type="button" class="filter-btn active" data-filter="all">All</button>
+                <button type="button" class="filter-btn" data-filter="Breakfast">Breakfast</button>
+                <button type="button" class="filter-btn" data-filter="Lunch">Lunch</button>
+                <button type="button" class="filter-btn" data-filter="Dinner">Dinner</button>
+                <button type="button" class="filter-btn" data-filter="Dessert">Dessert</button>
+                <button type="button" class="filter-btn" data-filter="Quick Snacks">Quick Snacks</button>
+            </div>
+        </div>
+
+        <p id="gallery-feedback" class="gallery-feedback" aria-live="polite"></p>
+
+        <div class="gallery-grid" id="gallery-grid">
+            <button type="button" class="gallery-item" data-category="Breakfast" data-title="Classic Fluffy Buttermilk Pancakes" aria-label="View Classic Fluffy Buttermilk Pancakes">
+                <img src="assets/images/breakfast/recipe1.jpg" data-full="assets/images/breakfast/recipe1.jpg" alt="Classic Fluffy Buttermilk Pancakes" loading="lazy">
+                <span class="gallery-caption">Classic Fluffy Buttermilk Pancakes</span>
+            </button>
+            
+            <button type="button" class="gallery-item" data-category="Breakfast" data-title="Smoked Salmon and Avocado Toast" aria-label="View Smoked Salmon and Avocado Toast">
+                <img src="assets/images/breakfast/recipe2.jpg" data-full="assets/images/breakfast/recipe2.jpg" alt="Smoked Salmon and Avocado Toast" loading="lazy">
+                <span class="gallery-caption">Smoked Salmon and Avocado Toast</span>
+            </button>
+
+            <button type="button" class="gallery-item" data-category="Breakfast" data-title="Berry and Chia Seed Overnight Oats" aria-label="View Berry and Chia Seed Overnight Oats">
+                <img src="assets/images/breakfast/recipe3.jpg" data-full="assets/images/breakfast/recipe3.jpg" alt="Berry and Chia Seed Overnight Oats" loading="lazy">
+                <span class="gallery-caption">Berry and Chia Seed Overnight Oats</span>
+            </button>
+
+            <button type="button" class="gallery-item" data-category="Breakfast" data-title="Spicy Shakshuka with Feta" aria-label="View Spicy Shakshuka with Feta">
+                <img src="assets/images/breakfast/recipe4.jpg" data-full="assets/images/breakfast/recipe4.jpg" alt="Spicy Shakshuka with Feta" loading="lazy">
+                <span class="gallery-caption">Spicy Shakshuka with Feta</span>
+            </button>
+
+            <button type="button" class="gallery-item" data-category="Lunch" data-title="Grilled Chicken Caesar Salad Wrap" aria-label="View Grilled Chicken Caesar Salad Wrap">
+                <img src="assets/images/lunch/recipe1.jpg" data-full="assets/images/lunch/recipe1.jpg" alt="Grilled Chicken Caesar Salad Wrap" loading="lazy">
+                <span class="gallery-caption">Grilled Chicken Caesar Salad Wrap</span>
+            </button>
+
+            <button type="button" class="gallery-item" data-category="Lunch" data-title="Quinoa and Roasted Chickpea Bowl" aria-label="View Quinoa and Roasted Chickpea Bowl">
+                <img src="assets/images/lunch/recipe2.jpg" data-full="assets/images/lunch/recipe2.jpg" alt="Quinoa and Roasted Chickpea Bowl" loading="lazy">
+                <span class="gallery-caption">Quinoa and Roasted Chickpea Bowl</span>
+            </button>
+
+            <button type="button" class="gallery-item" data-category="Lunch" data-title="Caprese Panini with Fresh Basil Pesto" aria-label="View Caprese Panini with Fresh Basil Pesto">
+                <img src="assets/images/lunch/recipe3.jpg" data-full="assets/images/lunch/recipe3.jpg" alt="Caprese Panini with Fresh Basil Pesto" loading="lazy">
+                <span class="gallery-caption">Caprese Panini with Fresh Basil Pesto</span>
+            </button>
+
+            <button type="button" class="gallery-item" data-category="Lunch" data-title="Spicy Peanut Soba Noodles" aria-label="View Spicy Peanut Soba Noodles">
+                <img src="assets/images/lunch/recipe4.jpg" data-full="assets/images/lunch/recipe4.jpg" alt="Spicy Peanut Soba Noodles" loading="lazy">
+                <span class="gallery-caption">Spicy Peanut Soba Noodles</span>
+            </button>
+
+            <button type="button" class="gallery-item" data-category="Dinner" data-title="Creamy Tuscan Garlic Chicken" aria-label="View Creamy Tuscan Garlic Chicken">
+                <img src="assets/images/dinner/recipe1.jpg" data-full="assets/images/dinner/recipe1.jpg" alt="Creamy Tuscan Garlic Chicken" loading="lazy">
+                <span class="gallery-caption">Creamy Tuscan Garlic Chicken</span>
+            </button>
+
+            <button type="button" class="gallery-item" data-category="Dinner" data-title="Sheet Pan Teriyaki Salmon with Broccoli" aria-label="View Sheet Pan Teriyaki Salmon with Broccoli">
+                <img src="assets/images/dinner/recipe2.jpg" data-full="assets/images/dinner/recipe2.jpg" alt="Sheet Pan Teriyaki Salmon with Broccoli" loading="lazy">
+                <span class="gallery-caption">Sheet Pan Teriyaki Salmon with Broccoli</span>
+            </button>
+
+            <button type="button" class="gallery-item" data-category="Dinner" data-title="Rustic Mushroom and Parmesan Risotto" aria-label="View Rustic Mushroom and Parmesan Risotto">
+                <img src="assets/images/dinner/recipe3.jpg" data-full="assets/images/dinner/recipe3.jpg" alt="Rustic Mushroom and Parmesan Risotto" loading="lazy">
+                <span class="gallery-caption">Rustic Mushroom and Parmesan Risotto</span>
+            </button>
+
+            <button type="button" class="gallery-item" data-category="Dinner" data-title="Garlic Butter Steak Bites with Asparagus" aria-label="View Garlic Butter Steak Bites with Asparagus">
+                <img src="assets/images/dinner/recipe4.jpg" data-full="assets/images/dinner/recipe4.jpg" alt="Garlic Butter Steak Bites with Asparagus" loading="lazy">
+                <span class="gallery-caption">Garlic Butter Steak Bites with Asparagus</span>
+            </button>
+
+            <button type="button" class="gallery-item" data-category="Dessert" data-title="Chewy Brown Butter Chocolate Chip Cookies" aria-label="View Chewy Brown Butter Chocolate Chip Cookies">
+                <img src="assets/images/dessert/recipe1.jpg" data-full="assets/images/dessert/recipe1.jpg" alt="Chewy Brown Butter Chocolate Chip Cookies" loading="lazy">
+                <span class="gallery-caption">Chewy Brown Butter Chocolate Chip Cookies</span>
+            </button>
+
+            <button type="button" class="gallery-item" data-category="Dessert" data-title="Campfire Smores Skillet Dip" aria-label="View Campfire Smores Skillet Dip">
+                <img src="assets/images/dessert/recipe2.jpg" data-full="assets/images/dessert/recipe2.jpg" alt="Campfire Smores Skillet Dip" loading="lazy">
+                <span class="gallery-caption">Campfire Smores Skillet Dip</span>
+            </button>
+
+            <button type="button" class="gallery-item" data-category="Dessert" data-title="No-Bake Mixed Berry Cheesecake" aria-label="View No-Bake Mixed Berry Cheesecake">
+                <img src="assets/images/dessert/recipe3.jpg" data-full="assets/images/dessert/recipe3.jpg" alt="No-Bake Mixed Berry Cheesecake" loading="lazy">
+                <span class="gallery-caption">No-Bake Mixed Berry Cheesecake</span>
+            </button>
+
+            <button type="button" class="gallery-item" data-category="Dessert" data-title="Lemon Olive Oil Cake" aria-label="View Lemon Olive Oil Cake">
+                <img src="assets/images/dessert/recipe4.jpg" data-full="assets/images/dessert/recipe4.jpg" alt="Lemon Olive Oil Cake" loading="lazy">
+                <span class="gallery-caption">Lemon Olive Oil Cake</span>
+            </button>
+
+            <button type="button" class="gallery-item" data-category="Quick Snacks" data-title="No-Bake Peanut Butter Energy Bites" aria-label="View No-Bake Peanut Butter Energy Bites">
+                <img src="assets/images/quick/recipe1.jpg" data-full="assets/images/quick/recipe1.jpg" alt="No-Bake Peanut Butter Energy Bites" loading="lazy">
+                <span class="gallery-caption">No-Bake Peanut Butter Energy Bites</span>
+            </button>
+
+            <button type="button" class="gallery-item" data-category="Quick Snacks" data-title="High-Energy Trail Mix with Dark Chocolate" aria-label="View High-Energy Trail Mix with Dark Chocolate">
+                <img src="assets/images/quick/recipe2.jpg" data-full="assets/images/quick/recipe2.jpg" alt="High-Energy Trail Mix with Dark Chocolate" loading="lazy">
+                <span class="gallery-caption">High-Energy Trail Mix with Dark Chocolate</span>
+            </button>
+
+            <button type="button" class="gallery-item" data-category="Quick Snacks" data-title="Crispy Roasted Sriracha Chickpeas" aria-label="View Crispy Roasted Sriracha Chickpeas">
+                <img src="assets/images/quick/recipe3.jpg" data-full="assets/images/quick/recipe3.jpg" alt="Crispy Roasted Sriracha Chickpeas" loading="lazy">
+                <span class="gallery-caption">Crispy Roasted Sriracha Chickpeas</span>
+            </button>
+
+            <button type="button" class="gallery-item" data-category="Quick Snacks" data-title="Greek Yogurt with Honey and Granola" aria-label="View Greek Yogurt with Honey and Granola">
+                <img src="assets/images/quick/recipe4.jpg" data-full="assets/images/quick/recipe4.jpg" alt="Greek Yogurt with Honey and Granola" loading="lazy">
+                <span class="gallery-caption">Greek Yogurt with Honey and Granola</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Lightbox overlay -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" aria-hidden="true">
+        <button type="button" class="lightbox-btn lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+        <button type="button" class="lightbox-btn lightbox-prev" id="lightbox-prev" aria-label="Previous image">&#8249;</button>
+        <img id="lightbox-img" src="" alt="">
+        <button type="button" class="lightbox-btn lightbox-next" id="lightbox-next" aria-label="Next image">&#8250;</button>
+        <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+
+    <footer>
+        <div class="footer-col">
+            <img src="assets/images/logo1.png" width="50" height="50" alt="Phantom Recipes Logo">
+            <p><em> A host to new and interesting recipes. </em></p>
+        </div>
+        <div class="footer-col">
+            <p>From breakfast to dinner (including dessert), Phantom Recipes has got you covered with all kinds of recipes that never disappoint.</p>
+        </div>
+        <div class="footer-col">
+            <p>Explore categories:</p>
+            <ul>
+                <li><a href="breakfast.html">Breakfast</a></li>
+                <li><a href="lunch.html">Lunch</a></li>
+                <li><a href="dinner.html">Dinner</a></li>
+                <li><a href="dessert.html">Dessert</a></li>
+                <li><a href="quick.html">Quick Snack</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <p>Quick Links:</p>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
