@@ -8,14 +8,16 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
     <!-- Main Navigation Bar -->
     <header>
         <div>
             <img src="assets/images/logo1.png" width="80" height="80" alt="Phantom Recipes Logo">
         </div>
-        
-        <ul class="nav-links">
+
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">&#9776;</button>        
+        <ul class="nav-links" id="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="recipes.html" class="active">Recipes</a></li>
@@ -27,7 +29,7 @@
         </div>
     </header>
 
-    <div class="hero">
+    <div class="hero" id="main">
         <h2>Explore Recipe Categories</h2>
         <p>Find the perfect dish for any time of day, all in one place.</p>
     </div>
@@ -119,5 +121,6 @@
         </div>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 </html>

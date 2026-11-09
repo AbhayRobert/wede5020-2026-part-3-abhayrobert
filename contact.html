@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
     <!-- Main Navigation Bar -->
     <header>
@@ -15,7 +16,8 @@
             <img src="assets/images/logo1.png" width="80" height="80" alt="Phantom Recipes Logo">
         </div>
         
-        <ul class="nav-links">
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+        <ul class="nav-links" id="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="recipes.html">Recipes</a></li>
@@ -27,7 +29,7 @@
         </div>
     </header>
 
-    <div class="hero">
+    <div class="hero" id="main">
         <h2>Get in Touch</h2>
         <p>Have a question or just want to say hi? We would love to hear from you.</p>
     </div>
@@ -61,10 +63,10 @@
             <div class="contact-col">
                 <div class="contact-details">
                     <h3>Business Details</h3>
-                    <p><strong>Email:</strong> TBD </p>
+                    <p><strong>Email:</strong> ST10534638@myemeris.edu.za</p>
                     <p><strong>Phone:</strong> +27 12 345 6789</p>
-                    <p><strong>Address:</strong> TBD </p>
-                    <p><strong>Working Hours:</strong> TBD </p>
+                    <p><strong>Address:</strong> Randpark Ridge, Randburg 2169 </p>
+                    <p><strong>Working Hours:</strong> Mon&ndash; Fri, 08:00&ndash;17:00 </p>
                     
                     <!-- Reminder: You can insert your Google Maps <iframe> tag here -->
                     <div class="map-box">
@@ -107,5 +109,6 @@
         </div>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 </html>

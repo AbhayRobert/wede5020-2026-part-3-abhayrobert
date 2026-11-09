@@ -59,6 +59,27 @@ p {
     line-height: 1.6;
 }
 
+/* skip link + visible focus for keyboard users */
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    background: #E76F51;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 0 0 6px 0;
+    z-index: 2000;
+}
+.skip-link:focus { left: 0; }
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #264653;
+    outline-offset: 2px;
+}
+
 /* Navigation Bar */
 header {
     background-color: #F8F9FA;
@@ -531,6 +552,20 @@ footer {
     }
 }
 
+@media (max-width: 700px) {
+    .nav-toggle { display: block; }
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+    .nav-links.open { display: flex; }
+    header {
+        flex-wrap: wrap;
+    }
+}
 /* Mobile Compatability */
 @media (max-width: 500px) {
 
