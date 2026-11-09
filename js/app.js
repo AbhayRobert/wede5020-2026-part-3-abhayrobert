@@ -117,21 +117,73 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
+/* enquiry submission  */
 document.addEventListener('DOMContentLoaded', function () {
 
     function isEmail(v) {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
     }
-
     function setError(el, msg) {
         var box = document.getElementById(el + '-error');
         if (box) { box.textContent = msg || ''; }
     }
-
     function escapeHtml(s) {
         return String(s).replace(/[&<>"']/g, function (c) {
             return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
         });
     }
 
+    /* Submit a Recipe
+       Input -> Validation -> Processing -> Response summary.
+       Generates a submission reference then presents a confirmation summary. 
+    */
+
+    var enquiryForm = document.getElementById('enquiry-form');
+    if (enquiryForm) {
+        var feedback = document.getElementById('enquiry-feedback');
+        enquiryForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            ['name', 'email', 'recipe-name', 'recipe-category', 
+                'recipe-description'].forEach(function (id) { setError(id, ''); });
+            feedback.className = 'form-feedback';
+            feedback.textContent = '';
+
+            var name = document.getElementById('name').value.trim();
+            var email = enquiryForm['email'].value.trim();
+            var recipeName = enquiryForm['recipe-name'].value.trim();
+            var category = enquiryForm['recipe-category'].value;
+            var desc = enquiryForm['recipe-description'].value.trim();
+
+            var ok = true;
+            if (!name) { setError('name', 'Please enter your name.'); ok = false; }
+            if (!isEmail(email)) { setError('email', 'Please enter a valid email address.'); ok = false; }
+            if (!recipeName) { setError('recipe-name', 'Please enter the recipe name.'); ok = false; }
+            if (!category) { setError('recipe-category', 'Please choose a category.'); ok = false; }
+            if (desc.length < 20) { setError('recipe-description', 'Please add at least 20 characters of detail.'); ok = false; }
+
+            if (!ok) {
+                feedback.className = 'form-feedback error';
+                feedback.textContent = 'Please correct the highlighted fields before submitting.';
+                return;
+            }
+
+            // Processing
+            var ref = 'PR-' + Date.now().toString().slice(-6);
+
+            var summary = document.getElementById('enquiry-summary');
+            summary.innerHTML =
+                '<h3>Submission Received \u2714</h3>' +
+                '<p>Thank you, ' + escapeHtml(name) + '. Your recipe has been logged. ' +
+                'Reference: <span class="ref">' + ref + '</span></p>' +
+                '<div class="summary-row"><span>Recipe</span><span>' + escapeHtml(recipeName) + '</span></div>' +
+                '<div class="summary-row"><span>Category</span><span>' + escapeHtml(category) + '</span></div>' +
+                '<div class="summary-row"><span>Submitted by</span><span>' + escapeHtml(email) + '</span></div>' +
+                '<div class="summary-row"><span>Details</span><span class="summary-instructions">' + escapeHtml(desc) + '</span></div>';
+            summary.classList.add('show');
+            feedback.className = 'form-feedback success';
+            feedback.textContent = 'Success! Your recipe summary is shown below.';
+            enquiryForm.reset();
+            summary.scrollIntoView({ behavior: 'smooth' });
+        });
+    }
 });

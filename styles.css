@@ -273,18 +273,20 @@ footer {
     line-height: 1.6; 
 }
 
-/* --- Contact Us & Submit Recipe Pages --- */
+/* Contact Us & Submit Recipe Pages */
 .contact-section, .form-section { 
     padding: 50px 30px; 
     display: flex; 
     justify-content: center; 
 }
+
 .contact-container { 
     display: flex; 
     gap: 40px; 
     max-width: 1000px; 
     width: 100%; 
 }
+
 .contact-col { 
     flex: 1; 
 }
@@ -293,12 +295,14 @@ footer {
     padding: 30px; 
     border-radius: 10px;
 }
+
 .form-container { 
     width: 50%; 
     min-width: 300px; 
     padding: 40px; 
-    box-shadow: 0 4px 12px rgba(0,0,0,0,08); 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
 }
+
 .contact-form label, 
 .form-container label {
     display: block; 
@@ -306,39 +310,74 @@ footer {
     margin-bottom: 8px; 
     color: #333;
 }
-.contact-form input:focus, 
-.contact-form textarea:focus,
-.form-container input:focus, 
-.form-container select:focus, 
-.form-container textarea:focus {
+
+/* Base styling for ALL form controls (moved out of :focus so fields
+   display correctly BEFORE focus) */
+.contact-form input, 
+.contact-form textarea,
+.form-container input, 
+.form-container select, 
+.form-container textarea {
     width: 100%; 
     padding: 12px; 
     margin-bottom: 20px;
     border: 1px solid #FFFFFF;
     border-radius: 5px;
     box-sizing: border-box; 
-    font-family: "Roboto",Arial;
+    font-family: "Roboto", Arial;
+    font-size: 1rem;
+    background-color: #FFFFFF;
+    color: #333;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
+
+/* Placeholder styling */
+.contact-form ::placeholder,
+.form-container ::placeholder {
+    color: #8a8a8a;
+}
+
+/* Focus state: clear accessible feedback when a field is active */
+.contact-form input:focus, 
+.contact-form textarea:focus,
+.form-container input:focus, 
+.form-container select:focus, 
+.form-container textarea:focus {
+    outline: none;
+    border-color: #2A9D8F;
+    box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.25);
+}
+
+/* Invalid field feedback after the browser has validated it */
+.contact-form input:invalid:not(:placeholder-shown),
+.form-container input:invalid:not(:placeholder-shown) {
+    border-color: #E76F51;
+}
+
 .contact-form button, 
 .form-container button { 
     width: 100%; 
     font-size: 1.1rem;
 }
+
 .contact-details {
     background-color: #FFFFFF; 
     padding: 30px; 
     border-radius: 10px; 
     border: 2px solid #D3D3D3;
 }
+
 .contact-details h3 { 
     color: #2A9D8F; 
     margin-top: 0; 
     margin-bottom: 15px; 
 }
+
 .contact-details p { 
     line-height: 1.6; 
     margin-bottom: 10px; 
 }
+
 .map-box {
     background-color: #E9ECEF; 
     height: 250px; width: 100%; 
@@ -682,6 +721,58 @@ footer {
 .lightbox-prev:active,
 .lightbox-next:active { transform: translateY(-50%) scale(0.94); }
 
+/* Enquiry card  */
+.form-feedback {
+    margin-bottom: 18px;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    display: none;
+}
+.form-feedback.error {
+    display: block;
+    background: #fdece8;
+    color: #b33a1c;
+    border: 1px solid #E76F51;
+}
+.form-feedback.success {
+    display: block;
+    background: #e6f5f2;
+    color: #1d6f64;
+    border: 1px solid #2A9D8F;
+}
+.field-error {
+    display: block;
+    color: #b33a1c;
+    font-size: 0.85rem;
+    margin: -14px 0 14px;
+    min-height: 1em;
+    font-weight: 600;
+}
+.summary-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 25px;
+    border-top: 5px solid #2A9D8F;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    display: none;
+}
+.summary-card.show { display: block; }
+.summary-card h3 { color: #2A9D8F; margin-bottom: 6px; }
+.summary-card .ref { color: #E76F51; font-weight: 700; }
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #E9ECEF;
+}
+.summary-row span:first-child { font-weight: 700; color: #333; }
+.summary-row span:last-child { text-align: right; color: #555; }
+.summary-instructions { white-space: pre-wrap; }
+
+
 /* Responsive Design */
 /* Tablet Compatability */
 @media (max-width: 900px) {
@@ -729,7 +820,7 @@ footer {
     }
 
     .nav-links.open { display: flex; }
-    
+
     header {
         flex-wrap: wrap;
     }
