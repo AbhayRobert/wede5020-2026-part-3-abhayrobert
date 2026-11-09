@@ -1,1 +1,7 @@
 # robots.txt for Phantom Recipes
+# Allow all well-behaved search engine crawlers to index the whole site.
+User-agent: *
+Allow: /
+
+# Point crawlers to the sitemap for efficient discovery.
+Sitemap: https://abhayrobert.github.io/wede5020-2026-part-3-abhayrobert/sitemap.xml
